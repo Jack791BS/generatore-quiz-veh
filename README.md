@@ -22,10 +22,16 @@ Dove inserirlo: Cerca la funzione initializeQuiz() nel tuo codice. Il punto esat
 
 Codice da copiare: JavaScript
 
-// ----- INSERISCI QUESTO CODICE PER IL PULSANTE 'START' ----- startBtn.addEventListener('click', function() { if (typeof tC !== 'undefined' && tC.event && typeof tC.event.quiz_veh === 'function') { tC.event.quiz_veh(this, { 'tipo_quiz': quizConfig.referrer, 'azione': 'start' }); } }); 2. Tracciamento per il pulsante finale (CTA) Questo codice traccia i click sul pulsante finale che compare nella schermata dei risultati (es. "Scopri di più").
+// ----- INSERISCI QUESTO CODICE PER IL PULSANTE 'START' ----- startBtn.addEventListener('click', function() { if (typeof tC !== 'undefined' && tC.event && typeof tC.event.quiz_veh === 'function') { tC.event.quiz_veh(this, { 'tipo_quiz': quizConfig.referrer, 'azione': 'start' }); } }); 
+<img width="939" height="564" alt="image" src="https://github.com/user-attachments/assets/2cabd039-9a2e-4630-9c55-2ea9ea05b887" />
 
+
+2. Tracciamento per il pulsante finale (CTA) Questo codice traccia i click sul pulsante finale che compare nella schermata dei risultati (es. "Scopri di più").
 Dove inserirlo: Cerca la funzione showResults() nel tuo codice. Il punto perfetto è subito dopo la riga resultLinkEl.innerText = resultConfig.ctaText;.
 
 Codice da copiare: JavaScript
 
 // ----- INSERISCI QUESTO CODICE PER IL PULSANTE 'FINISH' ----- resultLinkEl.addEventListener('click', function() { if (typeof tC !== 'undefined' && tC.event && typeof tC.event.quiz_veh === 'function') { tC.event.quiz_veh(this, { 'tipo_quiz': quizConfig.referrer, 'azione': 'finish' }); } }); In sintesi, stai semplicemente aggiungendo un nuovo "ascoltatore" (addEventListener) a ciascun pulsante per inviare l'evento di tracciamento specifico quando vengono cliccati. Il codice è già configurato per recuperare dinamicamente il tipo di quiz (quizConfig.referrer) e l'azione corretta (start o finish).
+
+<img width="947" height="1065" alt="image" src="https://github.com/user-attachments/assets/5aeef129-68e0-4440-bfc7-7f8560b72c55" />
+
