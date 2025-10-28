@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF--8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,7 +22,7 @@
             -webkit-background-clip: text;
             color: transparent;
         }
-        /* Fix per Instapage: assicura che il link CTA sia cliccabile */
+		/* ----- MODIFICA AGGIUNTA QUI ----- */
         #result-link {
             position: relative;
             z-index: 9999;
@@ -31,8 +31,7 @@
 </head>
 <body class="bg-gray-50">
     <div id="quiz-app-container" class="quiz-body w-full max-w-2xl mx-auto p-4 sm:p-6 md:p-8">
-        <!-- L'intera app del quiz verrà iniettata qui -->
-    </div>
+        </div>
     
     <script id="quiz-data-container" type="application/json">
         {
@@ -719,7 +718,7 @@
     "questions": [
       {
         "id": 1759238587887,
-        "question": "Quant'è la vita media di una caldaia? ",
+        "question": "Quant'è la vita media di una caldaia?",
         "answers": [
           {
             "text": "5-7 anni",
@@ -1193,7 +1192,6 @@
                     <div class="bg-blue-100 text-blue-800 text-xl md:text-2xl font-bold py-4 px-6 rounded-xl mb-6 inline-block">
                         Punteggio Finale: <span id="final-score"></span>
                     </div>
-                    <!-- Modifica: aggiunto evento onclick per Instapage -->
                     <a id="result-link" href="#" target="_blank" onclick="window.open(this.href, '_blank'); return false;" class="btn-gradient inline-block text-white font-bold py-3 px-8 rounded-full shadow-md mt-6 mb-8" style="background-image: linear-gradient(to right, ${quizConfig.color.start}, ${quizConfig.color.end})"></a>
                     <div class="my-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Riepilogo Risposte</h3>
@@ -1203,13 +1201,12 @@
                 </div>
             `;
             
-            // Modifica: blocco footer aggiornato con i link social corretti e testo di copyright
             const footerHtml = `
                 <footer class="text-white rounded-2xl shadow-lg mt-8 p-6 text-center" style="background-image: linear-gradient(to right, ${quizConfig.color.start}, ${quizConfig.color.end});">
                     <img src="https://vivienergia.imgix.net/uploads/2025/07/31123019/VIVIenergia_bandiera_CMYK_Bianco-1.png" alt="Logo VIVIenergia Bianco" class="h-12 mx-auto mb-6">
                     <div class="flex justify-center space-x-6 mb-4">
                         <a href="https://www.facebook.com/VIVIenergia/?locale=it_IT" target="_blank" class="hover:opacity-80" aria-label="Facebook"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
-                        <a href="https://www.instagram.com/vivi_energia/" target="_blank" class="hover:opacity-80" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        <a href="https://www.instagram.com/vivi_energia/" target="_blank" class="hover:opacity-80" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
                         <a href="https://www.linkedin.com/company/vivi-energia/" target="_blank" class="hover:opacity-80" aria-label="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
                         <a href="https://www.youtube.com/channel/UCtJHNoeWukENnTQC2NHGbEw" target="_blank" class="hover:opacity-80" aria-label="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
                     </div>
@@ -1244,7 +1241,20 @@
                         <p class="text-gray-600 mb-8 whitespace-pre-wrap">${quizConfig.introText}</p>
                         <button id="start-btn" class="btn-gradient text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-md w-full" style="background-image: linear-gradient(to right, ${quizConfig.color.start}, ${quizConfig.color.end})">Inizia il Quiz</button>
                     `;
-                    document.getElementById('start-btn').addEventListener('click', startQuestions);
+                    const startBtn = document.getElementById('start-btn');
+                    startBtn.addEventListener('click', startQuestions);
+
+                    // ----- MODIFICA AGGIUNTA QUI (START BUTTON) -----
+                    startBtn.addEventListener('click', function() {
+                        if (typeof tC !== 'undefined' && tC.event && typeof tC.event.quiz_veh === 'function') {
+                            tC.event.quiz_veh(this, {
+                                'tipo_quiz': quizConfig.referrer,
+                                'azione': 'start'
+                            });
+                        }
+                    });
+                    // ----- FINE MODIFICA -----
+
                     introContainer.classList.remove('hidden');
                     questionArea.classList.add('hidden');
                     resultsContainer.classList.add('hidden', 'opacity-0');
@@ -1334,6 +1344,17 @@
                 resultMessageEl.innerText = resultConfig.message;
                 resultLinkEl.href = resultConfig.ctaLink;
                 resultLinkEl.innerText = resultConfig.ctaText;
+
+                // ----- MODIFICA AGGIUNTA QUI (FINISH BUTTON) -----
+                resultLinkEl.addEventListener('click', function() {
+                    if (typeof tC !== 'undefined' && tC.event && typeof tC.event.quiz_veh === 'function') {
+                        tC.event.quiz_veh(this, {
+                            'tipo_quiz': quizConfig.referrer,
+                            'azione': 'finish'
+                        });
+                    }
+                });
+                // ----- FINE MODIFICA -----
             }
 
             function handleNextButton() {
